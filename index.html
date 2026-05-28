@@ -1151,17 +1151,19 @@ function switchFinanzas(period, btn) {
   const wfContainer = document.getElementById('waterfall-container');
 
   if (period === '2024') {
-    document.getElementById('fin-wf-title').textContent = 'Waterfall Financiero 2024 (miles de millones COP)';
+    document.getElementById('fin-wf-title').textContent = 'Waterfall Financiero 2024 (cifras en miles de millones COP)';
     const items = [
-      { label: 'Venta de Pasajes', val: 38.272, type: 'pos' },
-      { label: 'Transferencias Distritales', val: 24.165, type: 'pos' },
-      { label: 'Total Ingresos Operacionales', val: 62.437, type: 'total' },
-      { label: 'Costos Operativos', val: -42.507, type: 'neg' },
-      { label: 'Déficit por Pasajes', val: -4.235, type: 'neg' },
-      { label: 'Impuestos y Gastos No Operativos', val: -3.891, type: 'neg' },
-      { label: 'Pérdida Neta 2024', val: -8.126, type: 'final' },
+      { label: 'Ingresos Operacionales (pasajes, recaudo, publicidad)', val: 38.273, type: 'pos' },
+      { label: 'Ingresos No Operacionales (transferencias distritales)', val: 25.031, type: 'pos' },
+      { label: 'Total Ingresos', val: 63.304, type: 'total' },
+      { label: 'Costo de Operacion (combustible, mantenimiento, conductores)', val: -42.508, type: 'neg' },
+      { label: 'Gastos de Administracion (nomina, contratos)', val: -8.443, type: 'neg' },
+      { label: 'Gastos de Operacion (vigilancia, servicios)', val: -8.877, type: 'neg' },
+      { label: 'Depreciacion, Amortizacion y Provisiones', val: -0.428, type: 'neg' },
+      { label: 'Gastos Financieros (intereses deuda flota)', val: -11.174, type: 'neg' },
+      { label: 'Perdida Neta 2024', val: -8.126, type: 'final' },
     ];
-    renderWaterfall(wfContainer, items, 62.437);
+    renderWaterfall(wfContainer, items, 63.304);
   } else {
     document.getElementById('fin-wf-title').textContent = 'Waterfall Financiero Ene-May 2025 (miles de pesos)';
     const items = [
